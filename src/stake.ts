@@ -20,7 +20,6 @@ export function getSetLockupInstruction(
   authorityPubkey: PublicKey,
 ): TransactionInstruction {
   const fields: Layout<any>[] = [u32("instruction")];
-  fields.push(ns64("lamports"));
   const lockupFields: any = {};
 
   if (lockupData.unixTimestamp !== undefined) {
